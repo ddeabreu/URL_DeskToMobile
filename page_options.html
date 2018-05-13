@@ -1,25 +1,23 @@
-{
-"name" :"extension chrome",
-"version" :"1.0",
-"manifest_version": 2,
-"content_security_policy": "script-src 'self' 'unsafe-eval'; object-src 'self'",
-"description" :"QR URL",
-"options_page":"page_options.html",
-"browser_action" :
-	{
-		 "default_icon": {                    // optional
-            "16": "images/icone16.png",           // optional
-            "24": "images/icone24.png",           // optional
-            "32": "images/icone32.png",
-            "48": "images/icone48.png",
-            "128": "images/icone128.png"            // optional
-          },
-        "default_title": "QR URL",      // optional; shown in tooltip
-		"default_popup" :"qr_url.html"
-	},
-"permissions": [
-"activeTab",
-"https://ajax.googleapis.com/",
-"https://api.qrserver.com/"
-  ]
-}
+<!DOCTYPE html>
+<html>
+<head>
+	<title>QR URL options</title>
+    <script src="option.js"></script>
+</head>
+
+<body>
+	<h1>Options de l'extension</h1>
+		<label for="nom">Nom</label><input type="text" name="nom" id="nom"/>
+		<label for="nom">Couleur préférée</label>
+		<select name="couleur" id="couleur">
+		<option value="green">vert</option>
+		<option value="red">rouge</option>
+		<option value="blue">bleu</option>
+		<option value="white">blanc</option>
+		<option value="grey">gris</option>
+		</select>
+		<button>Enregistrer</button>
+
+
+</body>
+</html>
